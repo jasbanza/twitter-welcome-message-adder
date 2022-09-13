@@ -12,7 +12,7 @@ passport.use(
       consumerKey: config.TWITTER_CONSUMER_KEY,
       consumerSecret: config.TWITTER_CONSUMER_SECRET,
       callbackURL: `${
-        process.env.BASE_URL || "http://127.0.0.1:8080"
+        process.env.BASE_URL || config.BASE_URL
       }/login/callback`,
     },
     (token, tokenSecret, profile, cb) => {
