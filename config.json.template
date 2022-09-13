@@ -1,0 +1,5 @@
+{
+  "BASE_URL": "redirect-url",
+  "TWITTER_CONSUMER_KEY": "your-consumer-api-key",
+  "TWITTER_CONSUMER_SECRET": "your-consumer-secret"
+}
