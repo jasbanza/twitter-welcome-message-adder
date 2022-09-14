@@ -3,7 +3,6 @@
 Since Twitter killed business.twitter.com, this is a way to set a welcome message for your Business Twitter account using their API with OAuth.
 > If you want to use CLI instead, your best option is to use [TWURL](https://developer.twitter.com/en/docs/tutorials/using-twurl), twitter's cURL wrapper which handles OAuth, but I don't want to be forced to install Ruby just for this...
 
-
 #### Prerequisites:
    - Install Node.js: [Download here](https://nodejs.dev/en/download/)
    - Guide: [Create Twitter Developer Account & Apply for Elevated Access Levels](#create-twitter-developer-account--apply-for-elevated-access-levels)
@@ -16,7 +15,7 @@ Since Twitter killed business.twitter.com, this is a way to set a welcome messag
       ```
    - Guide: [Environment Configuration](#environment-configuration)
 
-### Usage
+#### Usage:
    - Start the server:
       ```bash
       node index
