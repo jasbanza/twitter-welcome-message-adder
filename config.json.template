@@ -1,6 +1,6 @@
 {
-  "PORT": 3000,
-  "BASE_URL": "redirect-url",
+  "PORT": 8080,
+  "BASE_URL": "http://127.0.0.1:8080/login/callback",
   "TWITTER_CONSUMER_KEY": "your-consumer-api-key",
   "TWITTER_CONSUMER_SECRET": "your-consumer-secret"
 }
