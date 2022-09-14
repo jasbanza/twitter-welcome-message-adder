@@ -1,7 +1,7 @@
 # twitter-welcome-message-adder
 
 Since Twitter killed business.twitter.com, this is a way to set a welcome message for your Business Twitter account using their API with OAuth.
-> If you want to use CLI instead, your best option is to use [TWURL](https://developer.twitter.com/en/docs/tutorials/using-twurl), twitter's cURL wrapper which handles OAuth, but you need to set up Ruby... so you might as well use this repo.
+> If you want to use CLI instead, your best option is to use [TWURL](https://developer.twitter.com/en/docs/tutorials/using-twurl), twitter's cURL wrapper which handles OAuth, but I don't want to be forced to install Ruby just for this...
 
 
 #### Prerequisites:
@@ -21,8 +21,11 @@ Since Twitter killed business.twitter.com, this is a way to set a welcome messag
       ```bash
       node index
       ```
-      - Open the webpage & OAuth your Twitter account
-      - Enter a welcome message
+      - Open the webpage & OAuth your Twitter account. 
+         > This will ONLY work for the account you have set up (consumer key)!
+      - Enter a welcome message & hit save.
+      - Click remove to remove it.
+         > if you try remove without having one saved, the app will crash. Just start again with "node index"
 
 
 ## Create Twitter Developer Account & Apply for Elevated Access Levels
@@ -33,19 +36,26 @@ Since Twitter killed business.twitter.com, this is a way to set a welcome messag
    * Follow the prompts, it will send an OTP to your email and may ask to verify your phone number if not already done.
 
 2) Make an app - it should prompt you this immediately after authenticating. Call it anything - it doesn't matter.
+   > Don't worry about saving the bearer token or API keys, we don't need this!
+3) In the developer portal, navigate to Projects & Apps > Your Project > Your App
+<img width="1349" alt="image" src="https://user-images.githubusercontent.com/1925470/190052242-f4d749fd-1700-4d15-8dfd-56b671431146.png">
 
-3) In the developer portal, navigate to Projects & Apps > Project 1 > Your App
    - Scroll down to **"User authentication settings"** > click ***"Edit"***
    - Enable OAuth 1.0a, scroll down further
-   - **OAUTH 1.0A SETTINGS** > enable *"Read and write and Direct message"*
+   - **OAUTH 1.0A SETTINGS** 
+      > enable *"Read and write and Direct message"*
+   - **Type of App**
+      > set to  *Web App, Automated App or Bot (Confidential client)*
    - **Callback URI / Redirect URL** > set to http(s)://server:port/login/callback
       > e.g. http://mysite.com:3000/login/callback
       > 
       > or http://127.0.0.1:3000/login/callback (if you want to run locally)
-      
    - **Website URL** 
-        > just set to *"https://example.com"*
+      > just set to *"https://example.com"*
    - ***Save***
+Yours should look like this:
+<img width="333" alt="image" src="https://user-images.githubusercontent.com/1925470/190052499-f2c98b82-a60c-4c1e-ba1f-8419d5ce4531.png">
+
 
 4) Left navigation pane again > Projects & Apps > Project 1
    - Below access section, scroll down to "Do you need Elevated access for your Project?" > Apply
@@ -71,3 +81,15 @@ Since Twitter killed business.twitter.com, this is a way to set a welcome messag
 ***NB: It's important to follow up on any emails, they will most likely ask the same questions, just reiterate that we will only be requiring these permissions in order to set the welcome message***
 
 ## Environment Configuration
+- copy the config.json.template > config.json and edit accordingly:
+```json
+{
+  "PORT": 3000,
+  "BASE_URL": "http://127.0.0.1:3000/login/callback",
+  "TWITTER_CONSUMER_KEY": "your-consumer-api-key",
+  "TWITTER_CONSUMER_SECRET": "your-consumer-secret"
+}
+```
+- If you run this locally, you don't need to change anything except the key and secret.
+- You can get the Key and Secret here:
+<img width="1566" alt="image" src="https://user-images.githubusercontent.com/1925470/190053552-22b9a5ce-3e53-4451-a7c8-daa77a15b9c1.png">
