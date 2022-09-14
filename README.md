@@ -1,9 +1,9 @@
 ### 3 steps are needed:
-- [Developer Account](#screenshots)
-- [Configure App Server](#prerequisites)
+- [Twitter Developer Account](#)
+- [Configuration](#prerequisites)
 - [Set Welcome Message](#setup)
 
-## CREATE DEVELOPER ACCOUNT & APPLY FOR ELEVATED ACCESS LEVELS
+## Create Twitter Developer Account & Apply for Elevated Access Levels
 
 NB: Make sure to log out of all twitter accounts except for the account in question.
 
