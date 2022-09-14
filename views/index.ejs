@@ -2,22 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Welcome Message Adder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/skeleton.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/css/skeleton.css"
+    />
   </head>
   <body>
     <div class="container">
       <h2>Authenticated as @<%= user.username %></h2>
 
       <form method="post">
+        To test, make sure you have a few accounts ready to DM your main
+        account, since it will only show once per user (and again after 8
+        hours). Perhaps your personal account and a few alt accounts
+        <br /><br />
         <label for="welcomeMessage">Welcome Message</label>
-        <textarea class="u-full-width" style="min-width: 100%; max-width: 100%" name="welcome_message" id="welcomeMessage"></textarea>
-        <input class="button-primary" type="submit" value="Set Welcome Message">
+        <textarea
+          class="u-full-width"
+          style="min-width: 100%; max-width: 100%"
+          name="welcome_message"
+          id="welcomeMessage"
+        ></textarea>
+
+        The following is optional. You can do 1,2 or 3 buttons for simple URL
+        redirection.
+        <br />
+        Buton text: Max string length of 36 characters
+        <label for="cta1text">Button 1 text</label>
+        <input
+          type="text"
+          name="cta1text"
+          placeholder="e.g. Click for support"
+          id="cta1text"
+        />
+        <label for="cta1url">Button 1 URL</label>
+        <input type="text" name="cta1url" id="cta1url" />
+        <br />
+
+        <label for="cta2text">Button 2 text</label>
+        <input
+          type="text"
+          name="cta2text"
+          placeholder="e.g. Click for marketing"
+          id="cta2text"
+        />
+        <label for="cta2url">Button 2 URL</label>
+        <input type="text" name="cta2url" id="cta2url" />
+        <br />
+
+        <label for="cta3text">Button 3 text</label>
+        <input
+          type="text"
+          name="cta3text"
+          placeholder="e.g. Click for listing"
+          id="cta3text"
+        />
+        <label for="cta3url">Button 3 URL</label>
+        <input type="text" name="cta3url" id="cta3url" />
+        <br />
+
+        <input
+          class="button-primary"
+          type="submit"
+          value="Set Welcome Message"
+        />
         <a href="/remove" class="button">Remove Welcome Message</a>
+        <br />
+        You can remove the message only if it has been set already.
       </form>
     </div>
   </body>

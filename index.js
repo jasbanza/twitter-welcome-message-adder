@@ -60,14 +60,41 @@ app.post("/", (req, res) => {
       access_token: req.user.token,
       access_token_secret: req.user.tokenSecret,
     });
-
+    const ctas = [];
+    if (req.body.cta1text !== "" && req.body.cta1url !== "") {
+      ctas.push({
+        type: "web_url",
+        label: req.body.cta1text,
+        url: req.body.cta1url,
+      });
+    }
+    if (req.body.cta2text !== "" && req.body.cta2url !== "") {
+      ctas.push({
+        type: "web_url",
+        label: req.body.cta2text,
+        url: req.body.cta2url,
+      });
+    }
+    if (req.body.cta3text !== "" && req.body.cta3url !== "") {
+      ctas.push({
+        type: "web_url",
+        label: req.body.cta3text,
+        url: req.body.cta3url,
+      });
+    }
     twitter.post(
       "direct_messages/welcome_messages/new",
       {
         welcome_message: {
-          message_data: {
-            text: req.body.welcome_message,
-          },
+          message_data:
+            ctas.length > 0
+              ? {
+                  text: req.body.welcome_message,
+                  ctas: ctas,
+                }
+              : {
+                  text: req.body.welcome_message,
+                },
         },
       },
       (err, body, apiRes) => {
@@ -128,4 +155,4 @@ app.get(
 
 app.listen(config.PORT);
 console.log(`Server running on port ${config.PORT}`);
-console.log(`Please use the following URL: ${config.BASE_URL}`)
+console.log(`Please use the following URL: ${config.BASE_URL}`);
