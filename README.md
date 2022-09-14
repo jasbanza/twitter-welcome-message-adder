@@ -10,12 +10,19 @@ Since Twitter killed business.twitter.com, this is a way to set a welcome messag
 
 #### Installation:
    - git clone this repo
-   - install dependencies with:
-```bash
-npm install
-```
-- Guide: [Environment Configuration](#environment-configuration)
+   - install dependencies:
+      ```bash
+      npm install
+      ```
+   - Guide: [Environment Configuration](#environment-configuration)
 
+### Usage
+   - Start the server:
+      ```bash
+      node index
+      ```
+      - Open the webpage & OAuth your Twitter account
+      - Enter a welcome message
 
 
 ## Create Twitter Developer Account & Apply for Elevated Access Levels
