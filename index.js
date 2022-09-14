@@ -11,9 +11,7 @@ passport.use(
     {
       consumerKey: config.TWITTER_CONSUMER_KEY,
       consumerSecret: config.TWITTER_CONSUMER_SECRET,
-      callbackURL: `${
-        process.env.BASE_URL || config.BASE_URL
-      }/login/callback`,
+      callbackURL: config.BASE_URL + `/login/callback`,
     },
     (token, tokenSecret, profile, cb) => {
       return cb(null, { token, tokenSecret, profile });
@@ -128,4 +126,4 @@ app.get(
   }
 );
 
-app.listen(process.env.PORT || 3000);
+app.listen(config.PORT);
