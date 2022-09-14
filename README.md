@@ -1,18 +1,26 @@
 # twitter-welcome-message-adder
 
-Since Twitter killed business.twitter.com, this is a way to set a welcome message for your Twitter account.
+Since Twitter killed business.twitter.com, this is a way to set a welcome message for your Business Twitter account using their API with OAuth.
+> If you want to use CLI instead, your best option is to use [TWURL](https://developer.twitter.com/en/docs/tutorials/using-twurl), twitter's cURL wrapper which handles OAuth, but you need to set up Ruby... so you might as well use this repo.
+
 
 #### Prerequisites:
-   - Node.js [Download here](https://nodejs.dev/en/download/)
+   - Install Node.js: [Download here](https://nodejs.dev/en/download/)
+   - Guide: [Create Twitter Developer Account & Apply for Elevated Access Levels](#create-twitter-developer-account--apply-for-elevated-access-levels)
 
-### 3 steps are needed:
-- [Create Twitter Developer Account & Apply for Elevated Access Levels](#create-twitter-developer-account--apply-for-elevated-access-levels)
-- [Configuration](#prerequisites)
-- [Set Welcome Message](#setup)
+#### Installation:
+   - git clone this repo
+   - install dependencies with:
+```bash
+npm install
+```
+- Guide: [Environment Configuration](#environment-configuration)
+
+
 
 ## Create Twitter Developer Account & Apply for Elevated Access Levels
 
-***NB: Make sure to log out of all twitter accounts except for the account in question.***
+> ***NB: Make sure to log out of all twitter accounts except for the account in question.***
 
 1) Go to: https://developer.twitter.com/en/portal/petition/essential/basic-info
    * Follow the prompts, it will send an OTP to your email and may ask to verify your phone number if not already done.
@@ -55,3 +63,4 @@ Since Twitter killed business.twitter.com, this is a way to set a welcome messag
 
 ***NB: It's important to follow up on any emails, they will most likely ask the same questions, just reiterate that we will only be requiring these permissions in order to set the welcome message***
 
+## Environment Configuration
