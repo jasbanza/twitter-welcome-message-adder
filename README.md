@@ -1,10 +1,7 @@
-3 steps are needed:
-- Create Twitter Developer Account & APPLY FOR ELEVATED ACCESS LEVELS
-
-- [Screenshots](#screenshots)
-- [Prerequisites](#prerequisites)
-- [Setup](#setup)
-- [Usage](#usage)
+### 3 steps are needed:
+- [Developer Account](#screenshots)
+- [Configure App Server](#prerequisites)
+- [Set Welcome Message](#setup)
 
 ## CREATE DEVELOPER ACCOUNT & APPLY FOR ELEVATED ACCESS LEVELS
 
